@@ -1,19 +1,32 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'jacoco'
+apply plugin: 'org.springframework.boot'
 
 version = '1.0'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE")
+    }
+}
+
 dependencies {
     testCompile project.ext.junit
     testCompile project.ext.mockito
+    testCompile project.ext.springframeworktest
+    //compile project.ext.springframework
+    //compile project (":aterrill-parking-bl-proj")
 }
 
 jar {
     manifest {
-        attributes 'Implementation-Title': 'aterrill-parking-api-proj',
+        attributes 'Implementation-Title': 'aterrill-parking-restapi-proj',
                    'Implementation-Version': version
     }
 }

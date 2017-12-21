@@ -1,0 +1,2 @@
+//include ":aterrill-parking-bl-proj"
+//project(":aterrill-parking-bl-proj").projectDir = file("../aterrill-parking-bl-proj")
