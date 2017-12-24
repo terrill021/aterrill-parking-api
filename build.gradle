@@ -20,8 +20,8 @@ dependencies {
     testCompile project.ext.junit
     testCompile project.ext.mockito
     testCompile project.ext.springframeworktest
-    //compile project.ext.springframework
-    //compile project (":aterrill-parking-bl-proj")
+    compile project.ext.springframework
+    compile project (":aterrill-parking-bl-proj")
 }
 
 jar {
